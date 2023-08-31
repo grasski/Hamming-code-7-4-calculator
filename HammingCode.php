@@ -113,7 +113,7 @@ class HammingCode
 
         $code[$index] = $code[$index] == 0 ? 1 : 0;
 
-        return [$code, $index];
+        return [$code, $index+1];
     }
 
     /**
@@ -164,8 +164,7 @@ class HammingCode
         echo "<p>Input message: <B>" . $message . "</B><BR>";
         echo "Code message: <B>" . $code . "</B><BR>";
         echo "Syndrome: <B>" . $syndrome . "</B><BR><BR>";
-
-        echo "Mistake generated at position: <B>" . $mistakeIndex + 1 . "</B><BR>";
+        echo "Mistake generated at position: <B>" . $mistakeIndex . "</B><BR>";
         echo "Wrong code message: <B>" . $wrongCode . "</B><BR>";
         echo "Wrong syndrome: <B>" . $wrongSyndrome . "</B><BR>";
         echo "Repaired code: <B>" . $repairedCode . "</B></p><BR>";
